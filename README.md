@@ -6,15 +6,15 @@ This project explores a machine learning approach to estimate particle positions
 
 1. [🔍 Problem Overview](#problem-overview)  
 2. [📂 Dataset](#dataset)  
-3. [🛠️ Proposed Approach](#proposed-approach)  
-4. [📊 Results](#results)  
-5. [⚡ Limitations & Future Developments](#limitations--future-developments)
+4. [🛠️ Proposed Approach](#proposed-approach)  
+5. [📊 Results](#results)  
+6. [⚡ Limitations & Future Developments](#limitations--future-developments)
 
-## 🔍 Problem Overview
+## Problem Overview
  
 Particle position estimation is a critical task in particle physics and involves detecting particles using an RSD. The dataset consists of events, each corresponding to a particle crossing the sensor and generating signals on 12 metallic pads. These signals include metrics like positive and negative peaks, time delay, area, and RMS values. However, the data also contains noise, making accurate predictions challenging.
 
-## 📂 Dataset
+## Dataset
 
 The dataset includes readings for 18 features per event (derived from hardware limitations), but only 12 pads are directly relevant. Key features:
 	•	Pmax: Positive peak magnitude (mV)
@@ -25,7 +25,7 @@ The dataset includes readings for 18 features per event (derived from hardware l
 
 Outlier detection and feature correlation analysis were performed to refine the dataset.
 
-## 🛠️ Proposed Approach
+## Proposed Approach
 
 1. Preprocessing
 
@@ -45,14 +45,14 @@ These models are robust against outliers and suitable for handling large dataset
 
 Key hyperparameters (e.g., number of estimators, maximum depth, min samples split) were optimized using Euclidean distance as the evaluation metric.
 
-## 📊 Results
+## Results
 
 The project achieved significant improvements over naive solutions:
 	•	Random Solution: Euclidean distance = 209.847
 	•	Naive Solution: Euclidean distance = 8.897
 	•	Our Model: Euclidean distance ≈ 4.734
 
-## ⚡ Limitations & Future Developments
+## Limitations & Future Developments
 
 Limitations
 
