@@ -6,8 +6,8 @@ This project explores a machine learning approach to estimate particle positions
 
 1. [🔍 Problem Overview](#-problem-overview)  
 2. [📂 Dataset](#-dataset)  
-4. [🛠️ Proposed Approach](#-proposed-approach)  
-5. [📊 Results](#-results)  
+4. [🛠️ Proposed Approach](#-proposed-approach)
+5. [📊 Results](#-results)
 6. [⚡ Limitations & Future Developments](#-limitations--future-developments)
 
 ## 🔍 Problem Overview
@@ -25,25 +25,23 @@ The dataset includes readings for 18 features per event (derived from hardware l
 
 Outlier detection and feature correlation analysis were performed to refine the dataset.
 
-## 🛠️ Proposed Approach
+## 🛠 Proposed Approach
 
-1. Preprocessing
-   
-	- Feature Selection: Removed noisy or redundant pads (e.g., Pads 0, 7, 12, 16, 17) based on correlation analysis.
-	- Normalization: Applied standard normalization to ensure consistent feature scaling.
-	- Dimensionality Reduction: Retained only highly correlated features (e.g., Pmax over Area).
+### Preprocessing
+- Feature Selection: Removed noisy or redundant pads (e.g., Pads 0, 7, 12, 16, 17) based on correlation analysis.
+- Normalization: Applied standard normalization to ensure consistent feature scaling.
+- Dimensionality Reduction: Retained only highly correlated features (e.g., Pmax over Area).
 
-2. Model Selection
-   
-	Two tree-based models were employed:
-	- Random Forest Regressor
-	- Extra Trees Regressor
+### Model Selection
+Two tree-based models were employed:
+- Random Forest Regressor
+- Extra Trees Regressor
 
-	These models are robust against outliers and suitable for handling large datasets.
+These models are robust against outliers and suitable for handling large datasets.
 
-3. Hyperparameter Tuning
+### Hyperparameter Tuning
 
-	Key hyperparameters (e.g., number of estimators, maximum depth, min samples split) were optimized using Euclidean distance as the evaluation metric.
+Key hyperparameters (e.g., number of estimators, maximum depth, min samples split) were optimized using Euclidean distance as the evaluation metric.
 
 ## 📊 Results
 
